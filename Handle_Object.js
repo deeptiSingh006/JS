@@ -7,7 +7,7 @@ person.fname="js";    //Modifying propert's value of an object
 console.log(person['fname']);   // use [] notion for accessing object property
 console.log(person.age);  // using .notion for accessing object property
 
-delete person.lname;      // deleting property from an object
+/*delete person.lname;      // deleting property from an object
 
 console.log(person);
 
@@ -20,9 +20,19 @@ console.log("hello");
 person.greet=greet;  // creating greet property of object and assigning function greet to it
 person.greet();   // calling greet function using person object.
 
-person.grade="a1";
+person.grade="a1";*/
 
 for(let prop in person) //in operator is used to enumerate the object .prop is conaining each property of person object
 {
     console.log(prop +':'+ person[prop] ) //o/p is display property name: value of that property
 }
+
+const output = Object.values(person); //values method returns array of values of properties only
+console.log( "output array holds value of person object " +output); //using Object 
+
+const output1 = Object.keys(person); //keys method provide array of keys only
+console.log( "output array holds keys of person object " +output1); //using Object 
+
+const output2 = Object.entries(person); //keys method provide array of enteries only
+console.log( "output array holds keys of person object " +output2); //using Object 
+
