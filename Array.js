@@ -88,7 +88,14 @@ let people_out = people.filter((i)=>i.age<50);
 console.log(people_out);
 
 //sorting arrays - to sort an array default sorting will be based on unicode points as a string
-//default sort
+// sort fucntion takes 3 values 
+// -1 if item 1 < item 2
+// 0 ig item1=item2
+// 1 if item1>item2
+//Any function that can return these three values can be used in sort for sorting values
+
+//default sort if unicode / Ascii comparison whichever 
+//Ascii value comes first will be smaller that the Ascii values that come later
 let sort_arr=['a','b','c','ed',-1,-4,34,'E','R'];
 console.log(sort_arr.sort());
 
@@ -96,12 +103,132 @@ let sort_arr1=['a','b','c','E','F','G','o','z','j','k'];
 console.log(sort_arr1.sort());
 
 //Alphabetical Sort
+// Many times in array you may have numbers hence in sort fuction 
+// you need to conver the element in string using toString
+// once the string is there use localeCompare
+// this ensures that E > a 
 let sort_arr2=['a','b','c','E','F','G','h','i','j','k',1,2].sort((a,b)=>{
     //toString() is required so that numbers are converted to string before they are localeComapre
     // since only String has the function localeCompare()
     return a.toString().localeCompare(b);
 })
-console.log(sort_arr2);
+console.log("ALPHABETICAL SORT : " + sort_arr2);
+
+// Sort the array based on the length of the strings in descending order
+let animal_array_ds=["zebras", "dogs", "elephants", "penguins"];
+let animal_array_ds1=["zebras", "dogs", "elephants", "penguins"];
+animal_array_ds.sort(function(a,b){
+    return a.length - b.length;
+})
+console.log("SORT BASED ON LENGTH OF ELEMENTS DESC :" + animal_array_ds);
 
 
-animal_array=["zebras", "dogs", "elephants", "penguins"]
+
+
+// Sort the array based on the length of the strings in ascending order
+let animal_array_asc=["zebras", "dogs", "elephants", "penguins"]
+
+animal_array_ds1.sort(function(a,b){
+    return b.length - a.length;
+})
+console.log("SORT BASED ON LENGTH OF ELEMENTS ASC : " + animal_array_ds1);
+
+//Numerical Sort (ascending)
+let num_arr_asc=[143, 1000, 10, 10000, 1]
+console.log("NUMERICAL SORT");
+console.log(num_arr_asc.sort(function(a,b){
+    return a-b;
+}));
+
+// Numerical Sort(descending)
+let num_arr_des=[100, 1000, 10, 10000, 241]
+console.log("NUMERICAL SORT");
+console.log(num_arr_des.sort(function(a,b){
+    return b-a;
+}));
+
+//Sorting array by even and odd numbers
+let even_odd_arr = [10, 21, 4, 15, 7, 99, 0, 12]
+
+
+
+// Date Sorting
+var dates = [
+    new Date(2007, 11, 10),
+    new Date(2014, 2, 21),
+    new Date(2009, 6, 11),
+    new Date(2016, 7, 23)
+   ];
+console.log("DATE SORT");
+console.log(dates.sort(function(a,b){
+    return a-b;
+}))
+
+
+// Use While loop to print elements of an array
+// If you run this look on value then as soon as null value is encountered 
+// the loop will exit
+let wl = [ 9,3,6,2,7,8,9,0,undefined,0,null,22,1];
+let key=0;
+let value;
+//while(value=wl[key++]){// this would have exited when null value is encountered
+while(key<wl.length){
+    console.log(wl[key]);
+    //console.log(value)
+    key++;
+}
+
+// LOOP: for in : for iterating though the indexes
+// LOOP: for of : for iterating though the values 
+
+// for in : iterating through the indexes
+let index=0
+for(index in wl){
+    console.log("Using for..in we get Indexes " + index + "  Value : " + wl[index])
+}
+
+//for of : interating through the values
+let values=0
+for(values of wl){
+    console.log("Using for..of we ger Value  : " + values)
+    // console.log("indexOf : " + wl.indexOf(values));
+    // Do not use this if there are duplicate items it qill give error.
+
+}
+
+// Adding the key : value  in the array 
+// for in will pick the key 
+// for of will pick the value
+wl.foo = 'bar'
+console.log(wl);
+
+for(index in wl){
+    console.log("Using for..in we get Indexes :" + index)
+}
+
+for(values of wl){
+    console.log("Using for..of we ger Value : " + values)
+}
+
+// to iterate over array indexes using for..of
+let myArray = [11, 12, 13, 14];
+console.log("Using for..of to get indexes/keys");
+for (let i of myArray.keys()) {
+    console.log("Using myArray.keys() Index :" + i + " Value: " + myArray[i])
+}
+ 
+
+ // for each
+ for_each_arr=[11,12,133,4,8,7,6,]
+ for_each_arr.forEach(function(value, index,arr){
+     console.log("Index in forEach: " + index + "  Value in forEach: " + value + "  IN array: " + arr)
+ })
+
+ // How to compare if two Arrays are equal
+ // Hint: JSON.stringify()
+ let arr_check1=[1,3,5,7];
+ let arr_check2=[1,3,5,7];
+ if (JSON.stringify(arr_check1) === JSON.stringify(arr_check2))
+ console.log("matched");
+ else
+ console.log("unmatched");
