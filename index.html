@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Use ! to start with boiler plate of HTML-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Examples</title>
+  </head>
+  <body>
+    <h1>Welcome to the world of javascript</h1>
+    <div class="container" id="firstcontainer">
+      <!-- ** EMIT Abbr div.container create div tag with class container-->
+      <button id="click">click here to explore JS</button>
+      <!--button#click gives button tag with id click shorthand notations we can use -->
+    </div>
+
+    <div class="check">
+      <input type="text" id="ds" />
+    </div>
+    <script>
+      // ways to print in JS
+      document.write("hi looking forward to run js");
+      // console api's
+      console.log("hello js world", 5 + 2, "i can do this");
+      console.error("to display error message in console!!");
+      console.warn("to display warning in console!!");
+      console.assert(4 === 6); //if assertion failed ..error message is displayed
+      //use forEach to handle array
+      var arr = [1, 2, 4, 6, 19];
+      arr.forEach(function (element, index, arr) {
+        console.log(element, (element += 2), index, arr[index]);
+      });
+//to convert whole array into string..string represented with black color in visual studio code
+console.log(arr.toString())
+//console.log(x);
+ let x = 5;
+console.log(x);
+if(x){
+ let x = 10;
+console.log(x);
+}
+console.log(x);
+
+    </script>
+  </body>
+</html>
