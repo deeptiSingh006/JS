@@ -33,15 +33,60 @@
       });
 //to convert whole array into string..string represented with black color in visual studio code
 console.log(arr.toString())
-//console.log(x);
- let x = 5;
+//console.log(x); checking scope of var and let
+ var x = 5;
 console.log(x);
 if(x){
- let x = 10;
+   let x = 10;
 console.log(x);
 }
 console.log(x);
 
+//checking == and === in case of string and string object 
+
+console.log(new String("yes") == new String("yes"));
+console.log(new String("yes") === new String("yes"));
+console.log("yes" == "yes");
+console.log("yes" === "yes");
+
+//chech whether String object is stored as object reference or not
+let s1=new String("abc");
+let s2=s1
+console.log(s1,s2);
+console.log(s1===s2);
+s2="abc";
+console.log(s1,s2);
+console.log(s1==s2);
+
+//use set to find unique element from array of strings
+let arr2=["hare","hare",'k','k','j','j'];
+let s= new Set(arr2);
+alert(s.size);
+for(let i of s){
+    console.log(i);
+}
+
+// use map --to create map pass an array with key value pair
+ let map1=new Map([
+     ['a',1],
+     ['b',2],
+     ['c',3]
+ ]);
+ let map2=new Map([
+     ['a',3],
+     ['b',4],
+     ['f',3]
+    
+ ]);
+
+ let spread_map=new Map([...map1,...map2]);
+ alert(spread_map.size);
+ for(let i of spread_map){
+    console.log(i);
+}
+
+
     </script>
+    <script src="promise_example.js"></script>
   </body>
 </html>
