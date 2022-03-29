@@ -19,7 +19,9 @@
       <input type="text" id="ds" />
     </div>
     <script>
-      // ways to print in JS
+    
+    
+    // ways to print in JS
       document.write("hi looking forward to run js");
       // console api's
       console.log("hello js world", 5 + 2, "i can do this");
@@ -31,8 +33,11 @@
       arr.forEach(function (element, index, arr) {
         console.log(element, (element += 2), index, arr[index]);
       });
-//to convert whole array into string..string represented with black color in visual studio code
+
+      //to convert whole array into string..string represented with black color in visual studio code
 console.log(arr.toString())
+
+
 //console.log(x); checking scope of var and let
  var x = 5;
 console.log(x);
@@ -44,25 +49,25 @@ console.log(x);
 
 //checking == and === in case of string and string object 
 
-console.log(new String("yes") == new String("yes"));
-console.log(new String("yes") === new String("yes"));
-console.log("yes" == "yes");
-console.log("yes" === "yes");
+console.log(new String("yes") == new String("yes")); //false ...different objects
+console.log(new String("yes") === new String("yes")); //false
+console.log("yes" == "yes"); //true
+console.log("yes" === "yes");//true
 
 //chech whether String object is stored as object reference or not
 let s1=new String("abc");
 let s2=s1
 console.log(s1,s2);
-console.log(s1===s2);
+console.log(s1===s2);  //true ...because they have hold same object
 s2="abc";
 console.log(s1,s2);
-console.log(s1==s2);
+console.log(s1==s2); // false
 
 //use set to find unique element from array of strings
 let arr2=["hare","hare",'k','k','j','j'];
 let s= new Set(arr2);
 alert(s.size);
-for(let i of s){
+for(let i of s){    //to print value of s use for of loop in set
     console.log(i);
 }
 
@@ -79,12 +84,29 @@ for(let i of s){
     
  ]);
 
- let spread_map=new Map([...map1,...map2]);
+ let spread_map=new Map([...map1,...map2]); //map will be formed with unique keys and map2 keys value override the map1 keys value
  alert(spread_map.size);
- for(let i of spread_map){
+ for(let i of spread_map){   //for iteration for of is used
     console.log(i);
 }
 
+// class is special type of function
+
+class Person {
+    constructor(name , dob){   //constructor is must to initialize the properties of object...js automativ=cally calls constructor when object is instantiated
+      this.name=name;
+      this.dob=dob;
+    }
+    getVal(){
+        return {name:this.name , dob:this.dob};
+    }
+
+}
+console.log(typeof Person);   // it return function as class is special type of function
+let p1 =new Person('ds','06-01-1983');  //to create object of Person class new keyword is must
+let p2 =new Person('as','03-11-2008');
+console.log(p1);
+console.log(p2);
 
     </script>
     <script src="promise_example.js"></script>

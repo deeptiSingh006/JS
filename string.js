@@ -1,6 +1,6 @@
 //expression
 // Ensure that you use template literal ` instead of '
-name='Deepti';
+let name='Deepti';
 message=`How are you ${name}`
 console.log(message);
 //output: How are you Deepti

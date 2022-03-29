@@ -4,7 +4,7 @@ person.lname="singh"; // adding property and value to an object
 person.age=26;        //adding property and value to an object
 //console.log(person);
 person.fname="js";    //Modifying propert's value of an object 
-console.log(person['fname']);   // use [] notion for accessing object property
+console.log(person['fname']);   // use [] notion for accessing object property..must be string
 console.log(person.age);  // using .notion for accessing object property
 
 /*delete person.lname;      // deleting property from an object
