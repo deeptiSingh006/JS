@@ -5,9 +5,11 @@ async function get_data()
     console.log(response);
     const data = await response.json();
     console.log(data);
-    // return data;
+     return data;
 } 
 console.log("i am using axios");
 //get_data().then(()=>{console.log(data);})
 let a=get_data();
 console.log(a);
+
+// need to debug the same. 
