@@ -24,7 +24,7 @@ console.log(address2);
 let address3 ='C\\24\r\n  Ayudh Vihar\r\n Dwarka';
 console.log(address3);
 
-
+//r===REVERSE STRING=====
 // Take the string
 // Split it with `` it splits the string to an array
 // Reverse the array formed
