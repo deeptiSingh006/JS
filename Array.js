@@ -208,8 +208,8 @@ while (key < wl.length) {
   key++;
 }
 
-// LOOP: for in : for iterating though the indexes
-// LOOP: for of : for iterating though the values
+// LOOP: for in : for iterating though the indexes //also used in object iterate in properties
+// LOOP: for of : for iterating though the values  // alo used in set and map values
 
 // for in : iterating through the indexes
 let index = 0;
@@ -247,6 +247,7 @@ console.log("Using for..of to get indexes/keys");
 for (let i of myArray.keys()) {
   console.log("Using myArray.keys() Index :" + i + " Value: " + myArray[i]);
 }
+
 
 // for each
 for_each_arr = [11, 12, 133, 4, 8, 7, 6];
