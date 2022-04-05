@@ -183,7 +183,9 @@ console.log(
 );
 
 //Sorting array by even and odd numbers
-let even_odd_arr = [10, 21, 4, 15, 7, 99, 0, 12];
+//let even_odd_arr = [10, 21, 4, 15, 7, 99, 0, 12];
+
+
 
 // Date Sorting
 var dates = [
@@ -275,3 +277,29 @@ let arr_check2 = [1, 3, 5, 7];
 if (JSON.stringify(arr_check1) === JSON.stringify(arr_check2))
   console.log("matched");
 else console.log("unmatched");
+
+const numbers = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+numbers.forEach(number => {
+  console.log(number);  
+});
+
+/* 
+- map()
+- filter()
+- reduce()
+- some() / every()
+- find() / findIndex()
+- forEach()
+
+Plus:
+
+- slice()
+- concat()
+- includes()
+- array spread operator
+*/
