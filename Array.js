@@ -6,6 +6,10 @@ let arr = [1, 2, 3, 4, 5, 7, 5, 1, 2, 1, 2]; // arrays are special kind of objec
 // the second parameter is the current vale of the array on which reduce is working
 
 // Program to get the addition of all the elements in the array
+const o= {a:'1',b:5};
+console.log("object test" +JSON.stringify(o));
+
+
 let add = arr.reduce(function (sum, curr) {
   sum = sum + curr;
   return sum;
@@ -262,6 +266,8 @@ for_each_arr.forEach(function (value, index, arr) {
   );
 });
 
+
+for_each_arr.forEach(((value,i)=>{console.log("hi trying for each again"+value)}));
 // How to compare if two Arrays are equal
 // Hint: JSON.stringify()
 let arr_check1 = [1, 3, 5, 7];
