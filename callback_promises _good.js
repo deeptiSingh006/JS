@@ -16,6 +16,32 @@ function get_student(){
      console.log("student list");
     },1000)
 }
+// Callbacks in JavaScript are functions that are passed as arguments to other functions. This is a very important feature of asynchronous programming,
+ and it enables the function that receives the callback to call our code when it finishes a long task, while allowing us to continue the execution of the code.
+function useCallback(callback)
+{
+    callback(1);
+    callback(2);
+    callback(3);
+}
+
+function callback(sentence) {
+    // TODO: print out sentence
+    console.log(`printin line ${sentence}`);
+}
+
+// TODO: execute useCallback with the callback as the argument
+useCallback(callback);
+
+
+It is also possible to define callbacks as anonymous functions, like so:
+
+setTimeout(function() {
+    console.log("Done!");
+}, 5000);
+it is also possible to define callbacks as regular functions also Like regular functions, callbacks can receive arguments and be executed more than once.
+
+
 
 enroll_student({name:"as",age:13},get_student);*/
 

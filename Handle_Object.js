@@ -36,3 +36,23 @@ console.log( "output array holds keys of person object " +output1); //using Obje
 const output2 = Object.entries(person); //keys method provide array of enteries only
 console.log( "output array holds keys of person object " +output2); //using Object 
 
+var person1={
+    firstName:"Jack",
+    lastName:"Smith",
+    age:19
+};
+person1["employed"]=true;
+
+
+
+for(let props in person1){
+    if(person1.hasOwnProperty(props)){
+       console.log(`property is ${props} and value is ${person1[props]}`);
+       }
+}
+
+ //its possible to convert array into object using spread operator,output is { '0': 22, '1': 3, '2': 44 } because array is a special kind of object here index values of array is used keys. vice versa is not possible
+const a=[22,3,44];
+const arrTry={...a};
+console.log(arrTry);
+
