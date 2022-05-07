@@ -87,7 +87,10 @@ for(let i of s){    //to print value of s use for of loop in set
  let spread_map=new Map([...map1,...map2]); //map will be formed with unique keys and map2 keys value override the map1 keys value
  alert(spread_map.size);
  for(let i of spread_map){   //for iteration for of is used
-    console.log(i);
+    console.log(i);   /* [ 'a', 3 ]
+                         [ 'b', 4 ]
+                         [ 'c', 3 ]
+                         [ 'f', 3 ]*/
 }
 
 // class is special type of function

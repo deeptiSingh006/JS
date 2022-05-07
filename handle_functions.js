@@ -1,4 +1,5 @@
-// program to use arguments variable of function to get arguments sent at the time of function calling.
+// program to use arguments object( it is like an array but has only length property not map ,filter etc)
+// of function to get arguments sent at the time of function calling.
 
 function add(){
     let sum=0;

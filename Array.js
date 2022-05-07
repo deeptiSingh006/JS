@@ -3,7 +3,7 @@ let arr = [1, 2, 3, 4, 5, 7, 5, 1, 2, 1, 2]; // arrays are special kind of objec
 //reduce always returns the accumulated result
 // this accumulated result is the first parmaeter of the call back function
 // specified in reduce
-// the second parameter is the current vale of the array on which reduce is working
+// the second parameter is the current value of the array on which reduce is working
 
 // Program to get the addition of all the elements in the array
 const o= {a:'1',b:5};
@@ -13,7 +13,7 @@ console.log("object test" +JSON.stringify(o));
 let add = arr.reduce(function (sum, curr) {
   sum = sum + curr;
   return sum;
-}, 0); /*initia; value of the accumulator / return */
+}, 0); /*initial; value of the accumulator / return */
 
 console.log(add);
 
@@ -72,6 +72,16 @@ const count_array1 = count_array.map((i) => {
 });
 console.log("counting array of string");
 console.log(count_array1);
+
+/* above program using reduce
+ let a=count_array.reduce(function(acc,curr){
+   
+     acc.push(curr.length); //  The push() method returns the new array length: so return statement in front of acc.push(curr.length) throws error
+     return acc;
+
+  },[])
+  console.log(a);
+ */
 
 //to find even numbers of array in array of numbers[1,2,1,4,56,8,10,5,3,2]
 let in_arr = [1, 2, 1, 4, 56, 8, 10, 5, 3, 2];
@@ -185,7 +195,8 @@ console.log(
 //Sorting array by even and odd numbers
 //let even_odd_arr = [10, 21, 4, 15, 7, 99, 0, 12];
 
-
+const arr=["arun","rishi","shivam","raj"] ;
+console.log(arr.sort())    //output [ 'arun', 'raj', 'rishi', 'shivam' ]
 
 // Date Sorting
 var dates = [
@@ -202,7 +213,7 @@ console.log(
 );
 
 // Use While loop to print elements of an array
-// If you run this look on value then as soon as null value is encountered
+// If you run this look on value then as soon as null value is encountered//falsy value in js are null,undefined,0,empty string,0,false
 // the loop will exit
 let wl = [9, 3, 6, 2, 7, 8, 9, 0, undefined, 0, null, 22, 1];
 let key = 0;
@@ -247,7 +258,7 @@ for (values of wl) {
   console.log("Using for..of we ger Value : " + values);
 }
 
-// to iterate over array indexes using for..of
+// to iterate over array indexes using for..of // used in map and set also
 let myArray = [11, 12, 13, 14];
 console.log("Using for..of to get indexes/keys");
 for (let i of myArray.keys()) {
@@ -303,3 +314,56 @@ Plus:
 - includes()
 - array spread operator
 */
+
+// Reduce program for finding number of times a city is
+// repeated in an array
+const arr=["pune","mumbai","mumbai","jaipur","pune"];
+// reduce 
+// acc: accumulator to accumulate output
+// curr: current item on the array
+const output = arr.reduce(function(acc,curr){
+if(acc[curr]){
+  acc[curr]= ++acc[curr];
+  }
+  else {
+  acc[curr]=1;
+  }
+  return acc;
+
+},{});
+console.log(output);
+
+//merging 3 arrays .Concat returns new array after concatenation
+const arr13 = ["Cecilie", "Lone"];
+const arr23 = ["Emil", "Tobias", "Linus"];
+const arr33 = ["Robin", "Morgan"];
+const myChildren = arr13.concat(arr23, arr33);
+
+//write a program to find min number..its not good idea to sort whole array for finding min value.
+
+let count_array1 = [3,-2,11,-22,34,100,99];
+
+ let min=Infinity;    // start min with infinity
+ for(let i=0;i<count_array1.length;i++){
+     if(count_array1[i]<min)
+     {
+         min=count_array1[i];
+     }
+
+ }
+ console.log(min);
+
+ //reduce to find length of each string with name of string
+ const arr1=["abc","red","blue"];
+ const arr2= arr1.reduce((acc,curr)=>{
+            
+           acc[curr]=curr.length;
+           return acc;
+     
+ },{});
+ console.log(arr2);
+
+ var arr_each = [1, 2, 4, 6, 19];
+ arr_each.forEach(function (element, index, arr) {
+   console.log(element, (element += 2), index, arr[index]);
+ });

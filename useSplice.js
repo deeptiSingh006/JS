@@ -1,5 +1,5 @@
 let arr=[8,9,10,11,12,13,14];
-let removedArr=arr.splice(2,3); //splice returns removed element ...splice(index position,no. of elements t be deleted,elements itself to add) <- arguments of splice
+let removedArr=arr.splice(2,3); //splice returns removed element ...splice(index position,no. of elements to be deleted,elements itself to add) <- arguments of splice
 //splice is used to remove or add elements in array. source array got change after splice
 console.log(arr);
 console.log(removedArr); //in above code 10,11,12 is removed fromm arr and results got store in removedArr

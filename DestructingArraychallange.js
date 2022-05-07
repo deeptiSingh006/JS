@@ -25,3 +25,25 @@ console.log({chefsDishes, regularDishes})// with key name individual arraya are 
 
 //if array ahas single string and we use spread operator...it spreads single characters in array.If multiple strings are there then it spreads multiple strings in array.
 // using console.log({ name of destructing variale increases readability and same name act as key})
+
+
+// nested object are destructured this way
+let employee = {
+    id: 1001,
+    name: {
+        firstName: 'John',
+        lastName: 'Doe'
+    }
+};
+
+//The following statement destructures the properties of the nested name object into individual variables:
+let {name: {
+    firstName,
+    lastName
+} } = employee;
+console.log(firstName);
+console.log(lastName);
+
+
+
+

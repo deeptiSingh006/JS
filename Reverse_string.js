@@ -16,6 +16,7 @@ let ansred=red1.reduce(function(acc,curr){
 console.log(ansred);
 
 const a = {...str};
+console.log("spread operator");
 console.log(a);
 //==============Program to uppercase first letter after each full stops
 const aa=str.split('. ');// split converts string into array

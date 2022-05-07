@@ -222,3 +222,9 @@ console.log(thirdToLastLetter);
 // Write a program to extract phone number from following string
 // "My Name is Deepti. My phone number is 9871949565"
 
+
+let str10 = "Please locate where 'locate' occurs!";
+console.log(str10.match(/locate/gi));   // match returns array of matched string
+console.log(str10.indexOf("locate")) // returns first found index position else -1 .DOESNOT SUPPORT REGEX
+console.log(str10.search("locate"))  //search is similar to indexOf but it supports regex .return first index position
+console.log(str10.search(/LOcate/i));
